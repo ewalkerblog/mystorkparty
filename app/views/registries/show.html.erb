@@ -1,0 +1,44 @@
+<% provide(:title, 'My Party and Present Whishes') %>
+<p id="notice"><%= notice %></p>
+
+<h3> Hi this is <%= @user.email %>'s baby shower present registry. <%= @user.email %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
+with a due date of <%= @registry.due_date %>. </h3> </br>
+
+
+<h3> Here is the presents registry: <h3></br>
+<div class="tablecustom">
+<table border="1" cellpadding="10">
+<tr>
+<th> Type:             </th>
+<th> Quanitity:        </th>
+<th> Color:            </th>
+<th> Brand:            </th>
+</tr>
+</table>
+</div>
+</br>
+
+
+<% @registry.presents.each do |registry| %>
+
+<div class="tablecustom">
+<table border="1" cellpadding="10">
+
+<tr>
+<th> <%= registry.type %>             </th>
+<th> <%= registry.quantity %>         </th>
+<th> <%= registry.color %>            </th>
+<th> <%= registry.brand %>            </th>
+</tr>
+</br>
+
+
+</table>
+</div>
+<% end %>
+
+</br>
+</br>
+<%= link_to 'Edit', edit_registry_path(@registry) %>
+<%= link_to 'Back', registries_path %>
+

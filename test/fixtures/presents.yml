@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  quantity: 1
+  brand: MyString
+  color: MyString
+  registry_id: 1
+
+two:
+  type: 
+  quantity: 1
+  brand: MyString
+  color: MyString
+  registry_id: 1

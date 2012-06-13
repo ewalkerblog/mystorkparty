@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  due_date: 2012-06-07
+  theme: MyString
+  gender: MyString
+  user_id: 1
+  present_id: 1
+
+two:
+  due_date: 2012-06-07
+  theme: MyString
+  gender: MyString
+  user_id: 1
+  present_id: 1

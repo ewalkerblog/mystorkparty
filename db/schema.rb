@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120604180217) do
+ActiveRecord::Schema.define(:version => 20120607191658) do
+
+  create_table "presents", :force => true do |t|
+    t.string   "type"
+    t.integer  "quantity"
+    t.string   "brand"
+    t.string   "color"
+    t.integer  "registry_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "presents", ["registry_id"], :name => "index_presents_on_registry_id"
+
+  create_table "registries", :force => true do |t|
+    t.date     "due_date"
+    t.string   "theme"
+    t.string   "gender"
+    t.string   "other_notes"
+    t.integer  "user_id"
+    t.integer  "present_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "registries", ["present_id"], :name => "index_registries_on_present_id"
+  add_index "registries", ["user_id"], :name => "index_registries_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -30,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20120604180217) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "role"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
