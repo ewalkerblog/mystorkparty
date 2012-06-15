@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :present_id
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :present_id, :name
   # attr_accessible :title, :body
   
   ROLES = %w[admin default banned]

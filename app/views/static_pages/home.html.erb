@@ -1,9 +1,23 @@
 <% provide(:title, 'Home') %>
-<div class="center">
-<p> Hallo and welcome to my little stork party or baby shower planning application. </br> 
-I hope you enjoy it. Please don't hesitate to contact me with any requests or questions. </br> 
-You can sign up or sign in below in the footer. </br> 
 
-Thank you and enjoy!</p>
+<div class="center">
+
+<p> Hallo and welcome to my little baby shower planning app. </br> 
+All Storky wants to do is help you and your friends plan this very special party and avoid duplicate presents.</p> </br> 
+
+     <p> <% if user_signed_in? && Registry.exists?(current_user.registry) %>
+      
+     <%= link_to "Show My Registry", current_user.registry %>
+	 
+	 <% else %>
+	 
+     <%= link_to "Create a new registry", new_registry_path %>
+	 
+	 <p>Sign Up Below the Pretty Footer</p>
+      
+     <% end %> </p>
+	 
+
 
 </div>
+

@@ -19,7 +19,7 @@
     <td><%= registry.gender %></td>
     <td><%= registry.user_id %></td>
     <td><%= registry.present_id %></td>
-    <td><%= link_to 'Show', registry %></td>
+    <td><%= link_to 'Show', @user.name %></td>
     <td><%= link_to 'Edit', edit_registry_path(registry) %></td>
     <td><%= link_to 'Destroy', registry, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

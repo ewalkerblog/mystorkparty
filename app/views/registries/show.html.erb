@@ -1,7 +1,7 @@
-<% provide(:title, 'My Party and Present Whishes') %>
+<% provide(:title, 'My Party and Presents') %>
 <p id="notice"><%= notice %></p>
 
-<h3> Hi this is <%= @user.email %>'s baby shower present registry. <%= @user.email %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
+<h3> Hi this is <%= @user.name %>'s baby shower present registry. <%= @user.name %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
 with a due date of <%= @registry.due_date %>. </h3> </br>
 
 
@@ -39,6 +39,7 @@ with a due date of <%= @registry.due_date %>. </h3> </br>
 
 </br>
 </br>
-<%= link_to 'Edit', edit_registry_path(@registry) %>
-<%= link_to 'Back', registries_path %>
+<%= link_to 'Edit', edit_registry_path(@registry) %> |
+<%= link_to 'Destroy', @registry, confirm: 'Are you sure?', method: :delete %>
+
 

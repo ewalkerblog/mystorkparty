@@ -1,11 +1,13 @@
 class RegistriesController < ApplicationController
 before_filter :authenticate_user!, :except => :show
 load_and_authorize_resource
+
+  
   # GET /registries
   # GET /registries.json
   def index
     @registries = Registry.all
-
+    @user = current_user
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @registries }
@@ -15,8 +17,9 @@ load_and_authorize_resource
   # GET /registries/1
   # GET /registries/1.json
   def show
-    @registry = Registry.find(params[:id])
-	@user = current_user
+    @user = current_user
+	@registry = Registry.find(params[:id])
+    
 
     respond_to do |format|
       format.html # show.html.erb
@@ -39,12 +42,14 @@ load_and_authorize_resource
   # GET /registries/1/edit
   def edit
     @registry = Registry.find(params[:id])
+	@user = current_user
   end
 
   # POST /registries
   # POST /registries.json
   def create
 	@registry = current_user.build_registry(params[:registry])
+	@user = current_user
 
     respond_to do |format|
       if @registry.save
@@ -61,6 +66,8 @@ load_and_authorize_resource
   # PUT /registries/1.json
   def update
     @registry = Registry.find(params[:id])
+	@user = current_user
+	
 
     respond_to do |format|
       if @registry.update_attributes(params[:registry])
@@ -78,9 +85,10 @@ load_and_authorize_resource
   def destroy
     @registry = Registry.find(params[:id])
     @registry.destroy
+	@user = current_user
 
     respond_to do |format|
-      format.html { redirect_to registries_url }
+      format.html { redirect_to home_path }
       format.json { head :no_content }
     end
   end
