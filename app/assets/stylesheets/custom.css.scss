@@ -32,12 +32,14 @@ header {
   color: #999;
   margin-bottom: 5px;
   margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* container */
 .container,
 .navbar-fixed-bottom .container {
-  width: 600px;
+  width: 750px;
 }
 
 /* typography */
@@ -70,8 +72,10 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   padding-top: 5px;
+  padding-bottom: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
 }
@@ -125,5 +129,15 @@ footer ul li {
  }
  th { 
  width:100px;
+ }
  
+ /* home */
+ 
+.split { 
+ border-top: 1px solid #eaeaea;
+ text-align: center;
+ margin-bottom: 5px;
+ margin-top: 5px;
+ padding-top: 5px;
+ padding-bottom: 5px;
  }

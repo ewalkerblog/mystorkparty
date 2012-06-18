@@ -10,11 +10,15 @@
       </ul>
     </div>
   <% end %>
-
+    
+	<%= f.label :name %><br />
+    <%= f.text_field :name %>
   
+    <%= f.label :party_name %><br />
+    <%= f.text_field :party_name %>
+		
     <%= f.label :due_date %><br />
-    <%= f.date_select :due_date, :rows => 5 %>
- 
+    <%= f.date_select :due_date %>
   
     <%= f.label :theme %><br />
     <%= f.text_field :theme, :class => 'field2' %>

@@ -1,5 +1,5 @@
 class RegistriesController < ApplicationController
-before_filter :authenticate_user!, :except => :show
+before_filter :authenticate_user!, :except => [:show, :index]
 load_and_authorize_resource
 
   
@@ -8,6 +8,7 @@ load_and_authorize_resource
   def index
     @registries = Registry.all
     @user = current_user
+	@registries= Registry.search(params[:search])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @registries }
@@ -30,6 +31,9 @@ load_and_authorize_resource
   # GET /registries/new
   # GET /registries/new.json
   def new
+    if Registry.exists?(current_user.registry)
+	redirect_to current_user.registry
+	else
     @registry = Registry.new
 	@user = current_user
 
@@ -37,6 +41,7 @@ load_and_authorize_resource
       format.html # new.html.erb
       format.json { render json: @registry }
     end
+  end
   end
 
   # GET /registries/1/edit

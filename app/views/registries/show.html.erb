@@ -1,11 +1,12 @@
 <% provide(:title, 'My Party and Presents') %>
 <p id="notice"><%= notice %></p>
 
-<h3> Hi this is <%= @user.name %>'s baby shower present registry. <%= @user.name %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
-with a due date of <%= @registry.due_date %>. </h3> </br>
+<h2> <%= @registry.party_name %> </h2>
+<p> Hi this is <%= @registry.name %>'s baby shower present registry. <%= @registry.name %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
+with a due date of <%= @registry.due_date %>. </p> </br>
 
 
-<h3> Here is the presents registry: <h3></br>
+<h5> Here is the presents registry: </h5></br>
 <div class="tablecustom">
 <table border="1" cellpadding="10">
 <tr>
@@ -39,7 +40,17 @@ with a due date of <%= @registry.due_date %>. </h3> </br>
 
 </br>
 </br>
-<%= link_to 'Edit', edit_registry_path(@registry) %> |
-<%= link_to 'Destroy', @registry, confirm: 'Are you sure?', method: :delete %>
+
+     <% if user_signed_in? %>
+      
+     <%= link_to 'Edit', edit_registry_path(@registry) %> |
+     <%= link_to 'Destroy', @registry, confirm: 'Are you sure?', method: :delete %>
+
+	 <% else %>
+	 
+	 <% end %>
+	 
+	 
+	
 
 
