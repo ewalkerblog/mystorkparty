@@ -108,6 +108,7 @@ footer ul li {
 
 .field1 {
  width: 6px;
+ text-align: center;
 } 
 
 .field2 {
@@ -122,13 +123,49 @@ footer ul li {
 
 /* tables */
 
-.tablecustom {
- width:100%;
- text-align: left;
+.tablecustomtop {
+ width:750px%;
+ text-align: center;
  vertical-align: top;
  }
- th { 
- width:100px;
+ 
+.tablecustomcontent {
+ width:750px;
+ text-align: center;
+ vertical-align: top;
+ }
+ 
+.thone { 
+ width:130px;
+ border-bottom: 0.1em solid #CDCDCD;
+ border-right: 0.1em solid #CDCDCD;
+ border-top: 0.1em solid #CDCDCD;
+ overflow:hidden;
+ 
+ }
+ 
+.thtwo { 
+ width:130px;
+ border-bottom: 0.1em solid #CDCDCD;
+ border-top: 0.1em solid #CDCDCD;
+ overflow:hidden;
+ 
+ }
+.tdone { 
+ width:130px;
+ overflow:hidden;
+ border-bottom: 0.1em dashed #CDCDCD;
+ border-right: 0.1em solid #CDCDCD;
+ text-align: center;
+ 
+ }
+
+.tdtwo { 
+ width:130px;
+ border-right: none;
+ overflow:hidden;
+ border-bottom: 0.1em dashed #CDCDCD;
+ text-align: center;
  }
  
  /* home */
@@ -140,4 +177,17 @@ footer ul li {
  margin-top: 5px;
  padding-top: 5px;
  padding-bottom: 5px;
+ }
+ 
+  /* custom text */
+  
+t {
+ font-family: Courier New, Courier, monospace; 
+ font-size: 18px;
+ }
+
+t1 {
+ font-family: Courier New, Courier, monospace; 
+ font-size: 20px;
+ font-weight: bold;
  }

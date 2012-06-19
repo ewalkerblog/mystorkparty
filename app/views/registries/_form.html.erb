@@ -1,3 +1,5 @@
+<div class="center">
+
 <%= nested_form_for(@registry) do |f| %>
   <% if @registry.errors.any? %>
     <div id="error_explanation">
@@ -11,32 +13,38 @@
     </div>
   <% end %>
     
-	<%= f.label :name %><br />
+	<%= f.label :name %>
     <%= f.text_field :name %>
   
-    <%= f.label :party_name %><br />
+    <%= f.label :party_name %>
     <%= f.text_field :party_name %>
 		
-    <%= f.label :due_date %><br />
+    <%= f.label :due_date %>
     <%= f.date_select :due_date %>
   
-    <%= f.label :theme %><br />
-    <%= f.text_field :theme, :class => 'field2' %>
+    <%= f.label :theme %>
+    <%= f.text_field :theme%>
   
-  <div class="field1">
-    <%= f.label :gender %><br />
+    <%= f.label :gender %>
     <%= f.text_field :gender %>
-  </div>
-  
-  <div class="field1">
+    </br>
+	
+  <div class="field1" align="center">
   <%= f.fields_for :presents do |builder| %>
   <%= render 'present_fields', f: builder %>
   <% end %>
   </div>
   
-  <%= link_to_add_fields "Add Presents", f, :presents %>
+  <br>
+  
+  <%= link_to_add_fields "Add Another Present", f, :presents %>
+  
+  <br>
+  </br>
   
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>

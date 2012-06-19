@@ -1,13 +1,19 @@
 <% provide(:title, 'Home') %>
 
 <div class="center">
+<br>
+<t> Hallo and welcome to Storky - the baby shower planning app. </br> 
+Storky wants to help you and your friends plan your very special baby shower and help the new mommy avoid getting duplicate presents.</t> </br></br> 
 
-<h4> Hallo and welcome to Storky, a little baby shower planning app. </br> 
-Storky wants to help you and your friends plan the very special baby shower and help the new mommy avoid getting duplicate presents.</h4> </br> 
+<t1> How Does It Work? </t1> </br></br> 
+
+<t> Either sign in below and create your very own party and present registry or search for a friends registry so that you know what to buy. It's that easy! </t> </br></br>
 
 </div>
 	 
 <div class="split">
+
+     <br>
 	 
 	 <h4> <% if user_signed_in? && Registry.exists?(current_user.registry) %>
       
@@ -20,9 +26,9 @@ Storky wants to help you and your friends plan the very special baby shower and 
 	 <% end %> </h4>
 	 
 	 <br>
-	 <h4>or</h4>
+	 <h4>Or</h4>
 	 <br>
-	 <h4>Search for a friend's registry</h4>
+	 <h4>Search For A Friend's Registry</h4>
 	 <br>
 	 <%= form_tag registries_path, method: :get do %>
      <%= text_field_tag :search, params[:search] %>

@@ -1,42 +1,41 @@
 <% provide(:title, 'My Party and Presents') %>
 <p id="notice"><%= notice %></p>
+<div class="center">
+<h2> This is <%= @registry.party_name %> </h2>
+<t> Hi this is <%= @registry.name %>'s baby shower present registry. <%= @registry.name %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
+with a due date of <%= @registry.due_date %>. </t> <br></br>
 
-<h2> <%= @registry.party_name %> </h2>
-<p> Hi this is <%= @registry.name %>'s baby shower present registry. <%= @registry.name %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
-with a due date of <%= @registry.due_date %>. </p> </br>
 
 
-<h5> Here is the presents registry: </h5></br>
-<div class="tablecustom">
-<table border="1" cellpadding="10">
+<t1>Here is the present registry: </t1><br></br>
+<div class="tablecustomtop">
+<table cellpadding="10" align="center">
 <tr>
-<th> Type:             </th>
-<th> Quanitity:        </th>
-<th> Color:            </th>
-<th> Brand:            </th>
+<th class = "thone"> Type:              </th>
+<th class = "thone">  Quanitity:        </th>
+<th class = "thone">  Color:            </th>
+<th class = "thtwo">  Brand:            </th>
 </tr>
 </table>
 </div>
-</br>
-
 
 <% @registry.presents.each do |registry| %>
 
-<div class="tablecustom">
-<table border="1" cellpadding="10">
+<div class="tablecustomcontent">
+<table cellpadding="10" align="center">
 
 <tr>
-<th> <%= registry.type %>             </th>
-<th> <%= registry.quantity %>         </th>
-<th> <%= registry.color %>            </th>
-<th> <%= registry.brand %>            </th>
+<td class = "tdone"> <%= registry.type %>             </td>
+<td class = "tdone"> <%= registry.quantity %>         </td>
+<td class = "tdone"> <%= registry.color %>            </td>
+<td class = "tdtwo"> <%= registry.brand %>            </td>
 </tr>
 </br>
 
-
+<% end %>
 </table>
 </div>
-<% end %>
+
 
 </br>
 </br>
@@ -49,7 +48,7 @@ with a due date of <%= @registry.due_date %>. </p> </br>
 	 <% else %>
 	 
 	 <% end %>
-	 
+	 </div>
 	 
 	
 
