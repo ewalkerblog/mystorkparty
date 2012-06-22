@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120618124439) do
+ActiveRecord::Schema.define(:version => 20120622193610) do
 
   create_table "presents", :force => true do |t|
     t.string   "type"
@@ -34,11 +34,9 @@ ActiveRecord::Schema.define(:version => 20120618124439) do
     t.integer  "present_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.string   "party_name"
     t.string   "name"
   end
 
-  add_index "registries", ["party_name"], :name => "index_registries_on_party_name"
   add_index "registries", ["present_id"], :name => "index_registries_on_present_id"
   add_index "registries", ["user_id"], :name => "index_registries_on_user_id"
 

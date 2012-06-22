@@ -5,13 +5,13 @@
 <div class="tablecustomtop">
 <table cellpadding="10" align="center">
   <tr>
-    <th class = "thone">Party Name</th>
+    <th class = "thone">Name</th>
 	<th class = "thtwo">Link</th>
   </tr>
 
 <% @registries.each do |registry| %>
   <tr>
-    <td class = "tdone"><%= registry.party_name %></td>
+    <td class = "tdone"><%= registry.name %></td>
 	<td class = "tdtwo"><%= link_to 'Click Here', registry %></td>
   </tr>
 <% end %>
