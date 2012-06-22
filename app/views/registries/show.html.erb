@@ -1,34 +1,28 @@
 <% provide(:title, 'My Party and Presents') %>
 <p id="notice"><%= notice %></p>
 <div class="center">
-<h2> This is <%= @registry.party_name %> </h2>
-<t> Hi this is <%= @registry.name %>'s baby shower present registry. <%= @registry.name %> wants a <%= @registry.theme %> theme and the baby is a <%= @registry.gender %>
-with a due date of <%= @registry.due_date %>. </t> <br></br>
 
+<t3> This is <%= @registry.name %>'s Baby Shower Registry </t3><br></br>
 
+<t><%= @registry.name %> wants a <%= @registry.theme %> themed party! The baby's gender is a <%= @registry.gender %>
+has a due date of <%= @registry.due_date %>. </t>
 
-<t1>Here is the present registry: </t1><br></br>
-<div class="tablecustomtop">
-<table cellpadding="10" align="center">
-<tr>
-<th class = "thone"> Type:              </th>
-<th class = "thone">  Quanitity:        </th>
-<th class = "thone">  Color:            </th>
-<th class = "thtwo">  Brand:            </th>
-</tr>
-</table>
-</div>
+<div class="color">
+<div class="bcontent">
+<table align="center">
+<t2><tr>
+<th class = "thone"> <div class="cellpaddingth"> Type:              </th>
+<th class = "thone"> <div class="cellpaddingth"> Quanitity:         </th>
+<th class = "thone"> <div class="cellpaddingth"> Color:             </th>
+<th class = "thtwo"> <div class="cellpaddingth"> Brand:             </th>
+</tr></t2>
 
 <% @registry.presents.each do |registry| %>
-
-<div class="tablecustomcontent">
-<table cellpadding="10" align="center">
-
 <tr>
-<td class = "tdone"> <%= registry.type %>             </td>
-<td class = "tdone"> <%= registry.quantity %>         </td>
-<td class = "tdone"> <%= registry.color %>            </td>
-<td class = "tdtwo"> <%= registry.brand %>            </td>
+<td class = "tdone"> <div class="cellpaddingtd"> <%= registry.type %>                  </td>
+<td class = "tdone"> <div class="cellpaddingtd"> X <%= registry.quantity %>            </td>
+<td class = "tdone"> <div class="cellpaddingtd"> <%= registry.color %>                 </td>
+<td class = "tdtwo"> <div class="cellpaddingtd"> <%= registry.brand %>                 </td>
 </tr>
 </br>
 
@@ -36,19 +30,19 @@ with a due date of <%= @registry.due_date %>. </t> <br></br>
 </table>
 </div>
 
-
-</br>
-</br>
+<div class="center">
 
      <% if user_signed_in? %>
       
-     <%= link_to 'Edit', edit_registry_path(@registry) %> |
-     <%= link_to 'Destroy', @registry, confirm: 'Are you sure?', method: :delete %>
+       <%= link_to 'Edit', edit_registry_path(@registry) %> |
+       <%= link_to 'Destroy', @registry, confirm: 'Are you sure?', method: :delete %>
 
-	 <% else %>
+	  <% else %>
 	 
 	 <% end %>
-	 </div>
+	 
+</div>
+	
 	 
 	
 

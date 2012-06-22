@@ -58,7 +58,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       if @registry.save
-        format.html { redirect_to @registry, notice: 'Registry was successfully created.' }
+        format.html { redirect_to @registry, notice: 'Your baby registry was successfully created.' }
         format.json { render json: @registry, status: :created, location: @registry }
       else
         format.html { render action: "new" }
@@ -76,7 +76,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       if @registry.update_attributes(params[:registry])
-        format.html { redirect_to @registry, notice: 'Registry was successfully updated.' }
+        format.html { redirect_to @registry, notice: 'Your baby registry was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

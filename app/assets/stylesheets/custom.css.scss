@@ -30,7 +30,7 @@ textarea {
 header {
   border-bottom: 1px solid #eaeaea;
   color: #999;
-  margin-bottom: 5px;
+  margin-bottom: 18px;
   margin-top: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -123,50 +123,98 @@ footer ul li {
 
 /* tables */
 
-.tablecustomtop {
+table{
  width:750px%;
  text-align: center;
  vertical-align: top;
- }
- 
-.tablecustomcontent {
- width:750px;
- text-align: center;
- vertical-align: top;
+ background-color: white;
  }
  
 .thone { 
  width:130px;
- border-bottom: 0.1em solid #CDCDCD;
- border-right: 0.1em solid #CDCDCD;
- border-top: 0.1em solid #CDCDCD;
+ border-right: 0.1em dashed #CDCDCD;
  overflow:hidden;
- 
+ padding-top: 10px;
+ padding-bottom: 10px;
+ text-align:center;
+ background: #bde1be;
  }
  
 .thtwo { 
  width:130px;
- border-bottom: 0.1em solid #CDCDCD;
- border-top: 0.1em solid #CDCDCD;
  overflow:hidden;
+ background: #bde1be;
  
  }
 .tdone { 
  width:130px;
  overflow:hidden;
- border-bottom: 0.1em dashed #CDCDCD;
- border-right: 0.1em solid #CDCDCD;
- text-align: center;
- 
+ border-right: 0.1em dashed #CDCDCD;
+ padding: 10px;
  }
 
 .tdtwo { 
  width:130px;
  border-right: none;
  overflow:hidden;
- border-bottom: 0.1em dashed #CDCDCD;
- text-align: center;
+ padding: 10px;
  }
+ 
+.cellpaddingth {
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  }
+
+.cellpaddingtd {
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-bottom: 0.1em dashed #CDCDCD;
+  }
+  
+.tableform1 {
+ width:80px;
+ text-align: center;
+}
+
+.tableform2 {
+ width:100px;
+ text-align: center;
+} 
+
+.tableform3 {
+ width:80px;
+ text-align: center;
+} 
+
+.tableform4 {
+ width:40px;
+ text-align: center;
+} 
+
+.tableform5 {
+ width:80px;
+ text-align: center;
+} 
+
+.tableform6 {
+ width:100px;
+ text-align: center;
+} 
+
+.tableform7 {
+ width:80px;
+ text-align: center;
+}  
+
+.tableform8 {
+ width:100px;
+ text-align: center;
+}
+
+.fields {
+}
  
  /* home */
  
@@ -182,12 +230,50 @@ footer ul li {
   /* custom text */
   
 t {
- font-family: Courier New, Courier, monospace; 
+ font-family: Arial, Helvetica, sans-serif; 
  font-size: 18px;
  }
 
 t1 {
- font-family: Courier New, Courier, monospace; 
+ font-family: Arial, Helvetica, sans-serif;
  font-size: 20px;
  font-weight: bold;
+ }
+ 
+t2 {
+ color: white;
+}
+
+t3 {
+ color: #bde1be;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ font-weight: bold;
+ text-align: center;
+ }
+ 
+columnt {
+ width:375px;
+ float:left;
+ border-right: 0.1em dashed #CDCDCD;
+ 
+ }
+ 
+columnt2 {
+ width:375px;
+ padding-left: 25px;
+ }
+ /* background */
+.color {
+}
+
+.bcontent {
+float: left;
+width: 100%;
+min-height: 200px;
+padding-bottom: 80px;
+}
+
+.form-background {
+ background: #bde1be;
  }

@@ -1,19 +1,16 @@
-  
   </br>
-  <div class="field1" align="center">
   <table align="center">
   <tr> 
-  <td class = "tableform1"> <%= f.label :type, "Present Type" %> </td>
-  <td class = "tableform2"> <%= f.text_field :type, :class => 'field2' %> </td>
-  <td class = "tableform3"> <%= f.label :Quantity, "Quantity" %> </td>
-  <td class = "tableform4"> <%= f.number_field :quantity, :class => 'field3' %> </td>
-  <td class = "tableform5"> <%= f.label :color, "Color" %> </td>
-  <td class = "tableform6"> <%= f.text_field :color, :class => 'field2' %> </td>
-  <td class = "tableform7"> <%= f.label :brand, "Brand" %> </td>
-  <td class = "tableform8"> <%= f.text_field :brand, :class => 'field2' %> </td>
-  <td class = "tableform9"> <%= f.link_to_remove "Remove this present", class: "btn btn-mini btn-info" %></td>
+  <td> <%= f.label :type, "Type:",  :class => "tableform1"         %> </td>
+  <td> <%= f.text_field :type, :class => "tableform2"             %> </td>
+  <td> <%= f.label :Quantity, "Quantity:", :class => "tableform3"  %> </td>
+  <td> <%= f.number_field :quantity, :class => "tableform4"       %> </td>
+  <td> <%= f.label :color, "Color:", :class => "tableform5"        %> </td>
+  <td> <%= f.text_field :color, :class => "tableform6"            %> </td>
+  <td> <%= f.label :brand, "Brand:", :class => "tableform7"        %> </td>
+  <td> <%= f.text_field :brand, :class => "tableform8"            %> </td>
+  <td> <%= f.link_to_remove "Remove this present", class: "btn btn-mini btn-info" %></td>
   </tr>
   </table>
-  </div>
 
  

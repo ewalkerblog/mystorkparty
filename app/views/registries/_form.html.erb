@@ -22,23 +22,21 @@
     <%= f.label :due_date %>
     <%= f.date_select :due_date %>
   
-    <%= f.label :theme %>
+    <%= f.label :theme, "Party Theme"%>
     <%= f.text_field :theme%>
   
     <%= f.label :gender %>
-    <%= f.text_field :gender %>
+    <%= f.select :gender, options_for_select([["Male", "male"],["Female","female"],['Secret', 'secret']])%>
     </br>
 	
-  <div class="field1" align="center">
+  <div align="center">
   <%= f.fields_for :presents do |builder| %>
   <%= render 'present_fields', f: builder %>
   <% end %>
   </div>
   
   <br>
-  
-  <%= link_to_add_fields "Add Another Present", f, :presents %>
-  
+  <%= link_to_add_fields "Add A Present", f, :presents %>
   <br>
   </br>
   
