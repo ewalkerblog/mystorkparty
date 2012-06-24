@@ -4,7 +4,7 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :name %><br />
+  <div><%= f.label :name, "Name (No Spaces)" %><br />
   <%= f.text_field :name %></div>
   
   <div><%= f.label :email %>
@@ -15,6 +15,8 @@
 
   <div><%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %></div>
+  
+  <t> After signing up please follow the instructions on the confirmation email before you can log in.  </t> </br></br>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
