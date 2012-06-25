@@ -1,5 +1,5 @@
 class RegistriesController < ApplicationController
-before_filter :authenticate_user!, :except => [:show, :index]
+before_filter :authenticate_user!, :except => [:index]
 load_and_authorize_resource
 
   
@@ -98,12 +98,4 @@ load_and_authorize_resource
     end
   end
 
-  private
-
-    def correct_user
-      @party = current_user.parties.find_by_id(params[:id])
-      redirect_to root_path if @party.nil?
-    end
 end
-
-

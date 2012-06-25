@@ -8,6 +8,7 @@ class Ability
       can :manage, :all
     elsif user.role == "default"
       can :manage, Registry, :user_id => user.id
+	  can :read, :all
     elsif user.role == "banned"
       cannot :manage, :all
     else

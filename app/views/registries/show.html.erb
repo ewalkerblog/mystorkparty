@@ -30,20 +30,13 @@ and our mommy has a due date of <%= @registry.due_date %>. </t>
 </table>
 </div>
 
-<div class="center">
-
-     <% if user_signed_in? %>
-      
-       <%= link_to 'Edit', edit_registry_path(@registry) %> |
-       <%= link_to 'Destroy', @registry, confirm: 'Are you sure?', method: :delete %>
-
-	  <% else %>
+     <% if can? :edit, @registry %> 
+         
+      <%= link_to 'Edit', edit_registry_path(@registry) %> |
+      <%= link_to 'Destroy', @registry, confirm: 'Are you sure?', method: :delete %>
+	  
+	 <% else %>
 	 
+	 <t> Have fun shopping! </t>
+	  
 	 <% end %>
-	 
-</div>
-	
-	 
-	
-
-
