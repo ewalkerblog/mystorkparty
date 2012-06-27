@@ -1,5 +1,3 @@
-<div class="center">
-
 <%= nested_form_for(@registry) do |f| %>
   <% if @registry.errors.any? %>
     <div id="error_explanation">
@@ -13,8 +11,10 @@
     </div>
   <% end %>
   
-  <t> Need ideas? Check out the blog <%= link_to "blog here", 'http://mystorkparty.tumblr.com/' %>. Basic necessities for your new bundle of joy include bodysuits, blanket sleepers, sweaters or jackets, socks, hats, crib, sheets, baby monitor, dresser, basket, diapers, cream, tissues, bathtub, baby soap, soft towels, hairbrush, bottle, burp cloth, chair, pacifiers and a stroller. </t></br></br>
-    
+  <div class="center">
+  <t3> For a list of brands and ideas check out <%= link_to "Nordstrom Brands", 'http://shop.nordstrom.com/c/baby-kids-brands' %> and <%= link_to "Babyoka", 'http://www.babyoka.co.uk/brandslist.html' %>. </t3><br></br>
+  
+   
 	<%= f.label :name %>
     <%= f.text_field :name %>
 		
@@ -25,21 +25,21 @@
     <%= f.text_field :theme%>
   
     <%= f.label :gender %>
-    <%= f.select :gender, options_for_select([["Male", "male"],["Female","female"],['Secret', 'secret']])%>
+    <%= f.select :gender, Registry::GENDER_TYPES,
+                                  :prompt => 'Select a gender' %>
     </br>
 	
-  <div align="center">
+ 
   <%= f.fields_for :presents do |builder| %>
   <%= render 'present_fields', f: builder %>
   <% end %>
+
+  <br>
+  <div class="center">
+  <t>Remember to add a present by clicking on the link "Add A Present To Your Registry" below.</t></br>
   </div>
   <br>
-  <t>Remember to add a present by clicking on the link "Add A Present To Your Registry" below.</t></br>
-  
-  <br>
-  <t4>
   <%= link_to_add_fields "Add A Present To Your Registry", f, :presents %>
-  </t4>
   <br>
   </br>
   

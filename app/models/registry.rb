@@ -9,6 +9,8 @@ class Registry < ActiveRecord::Base
   accepts_nested_attributes_for :presents, allow_destroy: true
   extend FriendlyId
   friendly_id :name
+  GENDER_TYPES = [ "Baby Boy", "Baby Girl", "It's A Secret", "Too Early To Say" ]
+  
   
   def self.search(search)
   # if search is not empty

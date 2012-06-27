@@ -1,16 +1,17 @@
-  </br>
   <table align="center">
   <tr> 
   <td> <%= f.label :type, "Type:",  :class => "tableform1"         %> </td>
-  <td> <%= f.text_field :type, :class => "tableform2"             %> </td>
+  <td> <%= f.select :type, Present::PRESENT_TYPES,
+           :prompt => 'Select a present type'                      %> </td>
   <td> <%= f.label :Quantity, "Quantity:", :class => "tableform3"  %> </td>
-  <td> <%= f.number_field :quantity, :class => "tableform4"       %> </td>
+  <td> <%= f.number_field :quantity, :class => "tableform4"        %> </td>
   <td> <%= f.label :color, "Color:", :class => "tableform5"        %> </td>
-  <td> <%= f.text_field :color, :class => "tableform6"            %> </td>
+  <td> <%= f.text_field :color, :class => "tableform6"             %> </td>
   <td> <%= f.label :brand, "Brand:", :class => "tableform7"        %> </td>
-  <td> <%= f.text_field :brand, :class => "tableform8"            %> </td>
+  <td> <%= f.text_field :brand, :class => "tableform8"             %> </td>
   <td> <%= f.link_to_remove "Remove this present", class: "btn btn-mini btn-info" %></td>
   </tr>
   </table>
+  <br>
 
  

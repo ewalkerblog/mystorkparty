@@ -174,14 +174,19 @@ table{
   }
   
 .tableform1 {
- width:80px;
+ width:50px;
  text-align: center;
 }
 
 .tableform2 {
- width:100px;
+ width:80px;
  text-align: center;
-} 
+}
+
+select {
+  width: 180px;
+  background-color: white;
+}
 
 .tableform3 {
  width:80px;
@@ -194,17 +199,17 @@ table{
 } 
 
 .tableform5 {
- width:80px;
+ width:50px;
  text-align: center;
 } 
 
 .tableform6 {
- width:100px;
+ width:60px;
  text-align: center;
 } 
 
 .tableform7 {
- width:80px;
+ width:50px;
  text-align: center;
 }  
 
@@ -213,8 +218,6 @@ table{
  text-align: center;
 }
 
-.fields {
-}
  
  /* home */
  
@@ -271,17 +274,31 @@ columnt2 {
  width:375px;
  padding-left: 25px;
  }
+ 
  /* background */
-.color {
-}
 
 .bcontent {
-float: left;
-width: 100%;
-min-height: 200px;
-padding-bottom: 80px;
+ float: left;
+ width: 100%;
+ min-height: 100px;
+ padding-bottom: 20px;
 }
 
 .form-background {
  background: #bde1be;
+ }
+ 
+  /* lists */
+  
+ul {
+ list-style-type: circle;
+ text-align: center;
+ color: #9db3ad;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ font-weight: bold; 
+ }
+ 
+.facebook {
+ padding-left: 72px;
  }
