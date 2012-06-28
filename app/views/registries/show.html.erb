@@ -1,19 +1,22 @@
 <% provide(:title, 'My Party and Presents') %>
 <p id="notice"><%= notice %></p>
-<div class="center">
 
+<div class="center">
 <t3> This is <%= @registry.name %>'s Baby Shower Registry </t3><br></br>
+
+
+<t5>
+Party Theme: <%= @registry.theme %> <br>
+Gender Status: <%= @registry.gender %><br>
+Due Date: <%= @registry.due_date %><br>
+</t5>
+</br>
 </div>
 
-<ul>
-She suggests a theme around <%= @registry.theme %>'s. <br>
-The babie's cuurent gender status is: "<%= @registry.gender %>". <br>
-Mommy has a due date of <%= @registry.due_date %>.<br>
-</ul>
-</br>
 <div class="facebook">
 <div class="fb-like" data-send="false" data-width="350" data-show-faces="true"></div>
 </div>
+
 </br>
 
 <div class="bcontent">
@@ -35,6 +38,7 @@ Mommy has a due date of <%= @registry.due_date %>.<br>
 <% end %>
 </table>
 </div> 
+
 <div class="center">
      <% if can? :edit, @registry %> 
          
@@ -43,13 +47,20 @@ Mommy has a due date of <%= @registry.due_date %>.<br>
 	  
 	 <% else %>
 	 
+	 <script type="text/javascript"><!--
+		google_ad_client = "ca-pub-1241780469142923";
+		/* Mystorkparty */
+		google_ad_slot = "5801694289";
+		google_ad_width = 468;
+		google_ad_height = 60;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	 </script>
+	 
 	 <iframe src="http://rcm.amazon.com/e/cm?t=ewalkerblog-20&o=1&p=48&l=ur1&category=baby&banner=1JYH964PEQVNKDREH182&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 
-	  
 	 <% end %>
-</div>
-<br></br>
-<div class="center">
-<div class="fb-comments" data-href="http://www.mystorkparty.com" data-num-posts="2" data-width="600"></div>
 </div>
 

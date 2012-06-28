@@ -13,14 +13,7 @@ class Registry < ActiveRecord::Base
   
   
   def self.search(search)
-  # if search is not empty
-  if search
-    find(:all, :conditions => ["name LIKE ?", "%#{search}%"])
-  # if search is empty return all
-  else
-    find(:all)
-  end
+  search.blank? ? [] : all(:conditions => ['name LIKE ?', "%#{search.strip}%"])
 end
-
 end
 

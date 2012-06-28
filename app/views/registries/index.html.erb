@@ -2,21 +2,38 @@
 <div class="center">
 <t3>Baby Shower Registry Search Results</t3><br></br>
 
-<div class="tablecustomtop">
+
+<% if @registries.empty? %>
+  Sorry we can't find that registry. Please try a differnet name.
+ <% else %>
+  <% @registries.each do |registry| %>
+  <div class="tablecustomtop">
 <table cellpadding="10" align="center">
   <tr>
     <th class = "thone">Name</th>
+	<th class = "thone">Theme</th>
+	<th class = "thone">Gender</th>
+	<th class = "thone">Due Date</th>
 	<th class = "thtwo">Link</th>
   </tr>
-
-<% @registries.each do |registry| %>
   <tr>
     <td class = "tdone"><%= registry.name %></td>
-	<td class = "tdtwo"><%= link_to 'View The Registry Here', registry %></td>
+	<td class = "tdone"><%= registry.theme %></td>
+	<td class = "tdone"><%= registry.gender %></td>
+	<td class = "tdone"><%= registry.due_date %></td>
+	<td class = "tdtwo"><%= link_to 'View The Registry', registry %></td>
   </tr>
+  </table>
+</td>
+
+ <% end %>
 <% end %>
 
-</table>
-</td>
+<br></br>
+     <%= form_tag registries_path, method: :get do %>
+     <%= text_field_tag :search, params[:search] %>
+     <%= submit_tag "Search", name: nil %>
+     <% end %>
+</br>
 </div>
 </br>

@@ -28,17 +28,18 @@
     <%= f.select :gender, Registry::GENDER_TYPES,
                                   :prompt => 'Select a gender' %>
     </br>
-	
- 
-  <%= f.fields_for :presents do |builder| %>
-  <%= render 'present_fields', f: builder %>
-  <% end %>
 
-  <br>
+  <br>	
   <div class="center">
   <t>Remember to add a present by clicking on the link "Add A Present To Your Registry" below.</t></br>
   </div>
+  </br>
+  
   <br>
+  <%= f.fields_for :presents do |builder| %>
+  <%= render 'present_fields', f: builder %>
+  <% end %>
+  
   <%= link_to_add_fields "Add A Present To Your Registry", f, :presents %>
   <br>
   </br>

@@ -241,10 +241,14 @@ t1 {
  font-family: Arial, Helvetica, sans-serif;
  font-size: 20px;
  font-weight: bold;
+ 
  }
  
 t2 {
- color: white;
+ color: #9db3ad;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ font-weight: bold;
 }
 
 t3 {
@@ -263,16 +267,27 @@ t4 {
  text-align: center;
  }
  
+t5 {
+ text-align: center;
+ color: #9db3ad;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ font-weight: bold; 
+ }
+ 
 columnt {
  width:375px;
  float:left;
  border-right: 0.1em dashed #CDCDCD;
+ font-family: Arial, Helvetica, sans-serif; 
+ font-size: 14px;
  
  }
  
 columnt2 {
  width:375px;
- padding-left: 25px;
+ font-family: Arial, Helvetica, sans-serif; 
+ font-size: 14px;
  }
  
  /* background */
@@ -289,15 +304,6 @@ columnt2 {
  }
  
   /* lists */
-  
-ul {
- list-style-type: circle;
- text-align: center;
- color: #9db3ad;
- font-family: Arial, Helvetica, sans-serif;
- font-size: 14px;
- font-weight: bold; 
- }
  
 .facebook {
  padding-left: 72px;
