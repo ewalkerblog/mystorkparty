@@ -9,6 +9,7 @@ load_and_authorize_resource
     @registries = Registry.all
     @user = current_user
 	@registries= Registry.search(params[:search])
+	@user = User.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @registries }

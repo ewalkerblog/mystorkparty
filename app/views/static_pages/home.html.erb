@@ -14,21 +14,21 @@ We want to help you and your friends plan <br> your very special baby shower and
 
      <br>
 	 
-	 <h4> <% if user_signed_in? && Registry.exists?(current_user.registry) %>
+	 <t2> <% if user_signed_in? && Registry.exists?(current_user.registry) %>
       
      <%= link_to "Show My Registry", current_user.registry %>
 	 
 	 <% else %>
 	 
-	 <%= link_to "Create a registry", new_registry_path %>
+	 <%= link_to "Create a registry (It's FREE!)", new_registry_path %>
 	 
-	 <% end %> </h4>
+	 <% end %> </t2>
 	 
-	 <br>
-	 <h4>Or</h4>
-	 <br>
-	 <h4>Search For A Friend's Registry</h4>
-	 <br>
+	 <br></br>
+	 <t2> Or </t2>
+	 <br></br>
+	 <t2>Search For A Friend's Registry</t2>
+	 <br></br>
 	 <%= form_tag registries_path, method: :get do %>
      <%= text_field_tag :search, params[:search] %>
      <%= submit_tag "Search", name: nil %>

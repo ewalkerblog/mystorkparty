@@ -29,6 +29,7 @@
  <% end %>
 <% end %>
 
+
 <br></br>
      <%= form_tag registries_path, method: :get do %>
      <%= text_field_tag :search, params[:search] %>
@@ -37,3 +38,10 @@
 </br>
 </div>
 </br>
+
+<div class="center">
+<% if user_signed_in? && current_user.admin? %>
+ Currently <%= @user.count %> users registered. 
+ <% else %>
+<% end %>
+</div>
