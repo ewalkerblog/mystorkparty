@@ -13,6 +13,18 @@ Due Date: <%= @registry.due_date %><br>
 </br>
 </div>
 
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1241780469142923";
+/* Mystorkpartytwo */
+google_ad_slot = "8017018930";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
 <div class="facebook">
 <div class="fb-like" data-send="false" data-width="350" data-show-faces="true"></div>
 </div>
@@ -41,7 +53,11 @@ Due Date: <%= @registry.due_date %><br>
 
 <div class="center">
      <% if can? :edit, @registry %> 
-         
+	 
+      <div class="center">
+		<t2> <%= link_to 'Email', href="mailto:?subject=Come%20see%20my%20baby%20shower%20registry!&body=I%20created%20a%20baby%20shower%20registry%20on%20http://www.mystorkparty.com.%20Please%20use%20it%20to%20avoid%20duplicate%20presents.", class: "btn btn-mini btn-info" %> your baby shower registry link to your friends!  </t2>
+      </div>
+	  <br>
       <%= link_to 'Edit Registry', edit_registry_path(@registry) %> |
       <%= link_to 'Destroy Registry', @registry, confirm: 'Are you sure?', method: :delete %>
 	  

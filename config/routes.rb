@@ -7,7 +7,8 @@ Mystorkparty::Application.routes.draw do
   root :to => "static_pages#home"
   
   match '/home',    to: 'static_pages#home'
-  
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
